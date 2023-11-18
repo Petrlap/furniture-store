@@ -67,6 +67,7 @@
   .main .add-to-cart {
     width: 30px;
     height: 30px;
+    transition: none;
   }
   .main .add-to-cart:hover {
     transform: none;
