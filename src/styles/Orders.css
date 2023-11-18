@@ -1,0 +1,29 @@
+.order {
+  width: 100%;
+  float: left;
+  margin-bottom: 20px;
+}
+.order__img {
+  width: 70px;
+  float: left;
+  margin-right: 20px;
+}
+.order__title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.order__price {
+  color: #797979;
+  font-weight: 600;
+}
+.order__delete-icon {
+  color: #ca5252;
+  float: right;
+  position: relative;
+  cursor: pointer;
+  transition: color, transform 500ms ease;
+}
+.order__delete-icon:hover {
+  color: #d83030;
+  transform: scale(1.5);
+}

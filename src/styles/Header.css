@@ -1,0 +1,136 @@
+.header {
+  width: 100%;
+  padding: 50px 0 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-sizing: border-box;
+}
+.menu-bar {
+  display: none;
+}
+.header__navbar-brand {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+.navbar__link {
+  margin-left: 25px;
+  cursor: pointer;
+  transition: opacity 500ms ease;
+}
+.navbar *:hover {
+  opacity: 0.5;
+}
+.basket {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.shop-cart-button {
+  cursor: pointer;
+  transition: color, transform 500ms ease;
+}
+.header .shop-cart-button:hover,
+.header .shop-cart-button .active {
+  color: #dc3d3d;
+  transform: scale(1.3);
+}
+.header .shop-cart {
+  position: absolute;
+  top: 40px;
+  width: 450px;
+  padding: 20px 20px 0px 20px;
+  background: #fafafa;
+  -webkit-box-shadow: 4px 5px 15px -7px #606060;
+  box-shadow: 4px 5px 15px -7px #606060;
+  z-index: 1000;
+  right: 0;
+}
+.empty__title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.orders-footer {
+  display: inline;
+}
+.orders-footer__button {
+  font-family: "Montserrat", sans-serif;
+  float: right;
+  font-weight: 600;
+  font-size: 20px;
+  border: 1px solid #c4c4c4;
+  background-color: #f5f3f1;
+  cursor: pointer;
+  margin: 16px 0 17px 0;
+  padding: 3px 6px 4px 6px;
+}
+.orders-footer__button:hover {
+  background-color: #e9e9e9;
+}
+.orders-footer__summa {
+  float: left;
+  width: 40%;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.go-top * {
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10001;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: rgba(199, 195, 195, 0.846);
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.go-top:hover * {
+  background-color: #555;
+}
+@media screen and (max-width: 800px) {
+  .menu-bar {
+    display: flex;
+    align-items: center;
+    margin: 0 20px 0 20px;
+  }
+  .menu-bar__icon {
+    font-size: 22px;
+  }
+  .navbar.active {
+    transform: translateX(100%);
+  }
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: -230px;
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    height: 100%;
+    padding-top: 20px;
+    background-color: #fff;
+    border-radius: 0 16px 16px 0;
+    box-shadow: 0 0 10px 1px #606060;
+    transition: transform 0.3s linear;
+    z-index: 1000;
+  }
+  .navbar__link {
+    margin: 20px 0 0 40px;
+    font-weight: 600;
+  }
+  .header__navbar-brand {
+    margin-left: 15px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .header .shop-cart {
+    width: 90vw;
+  }
+}

@@ -1,0 +1,112 @@
+.full-item {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(0, 0, 0, 0.8);
+  z-index: 9998;
+  overflow: auto;
+}
+.full-item > .full-item__container {
+  width: 400px;
+  position: relative;
+  margin: 10% auto;
+  padding: 40px 30px;
+  background: #fff;
+  border-radius: 9px;
+}
+.full-item__img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  transform: transform 500ms ease;
+  cursor: pointer;
+}
+.full-item__img:hover {
+  transform: scale(1.05);
+}
+.full-item__title,
+.full-item__desc,
+.full-item__price {
+  margin: 10px 20px;
+  color: #333;
+}
+.full-item__price {
+  color: #5fa36a;
+}
+.full-item .add-to-cart {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background: #ca5252;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 500ms ease;
+}
+.full-item .add-to-cart:hover {
+  transform: scale(1.5) translateY(-5px);
+}
+.full-item__close-btn {
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  position: relative;
+  z-index: 1;
+  margin: 50px 50px;
+  cursor: pointer;
+}
+.full-item__close-btn:before {
+  content: "+";
+  color: gray;
+  position: absolute;
+  z-index: 2;
+  transform: rotate(45deg);
+  font-size: 50px;
+  line-height: 1;
+  top: -5px;
+  left: 6px;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
+}
+.full-item__close-btn:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background: gray;
+  z-index: 1;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
+  transform: scale(0.01);
+}
+.full-item__close-btn:hover:after {
+  transform: scale(1);
+}
+.full-item__close-btn:hover:before {
+  transform: scale(0.8) rotate(45deg);
+  color: #fff;
+}
+@media screen and (max-width: 800px) {
+  .full-item > .full-item__container {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 575px) {
+  .full-item__close-btn {
+    margin: 30px 30px;
+  }
+  .full-item > .full-item__container {
+    width: 55%;
+    margin: 25% auto;
+  }
+  .full-item .add-to-cart:hover {
+    transform: none;
+  }
+}
