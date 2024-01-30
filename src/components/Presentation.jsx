@@ -1,5 +1,9 @@
+import bg from "../img/bg.jpg";
+
 const Presentation = () => {
-  return <div className="presentation"></div>;
+  return (
+    <img src={bg} alt="Изображение отсутствует" className="presentation" />
+  );
 };
 
 export default Presentation;
