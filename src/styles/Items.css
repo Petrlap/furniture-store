@@ -19,9 +19,6 @@
   transform: transform 500ms ease;
   cursor: pointer;
 }
-.item__img:hover {
-  transform: scale(1.05);
-}
 .item__title,
 .item__desc,
 .item__price {
@@ -70,6 +67,16 @@
     transition: none;
   }
   .main .add-to-cart:hover {
+    transform: none;
+  }
+}
+@madia (hover: hover) {
+  .item__img:hover {
+    transform: scale(1.05);
+  }
+}
+@madia (hover: none) {
+  .item__img:hover {
     transform: none;
   }
 }
